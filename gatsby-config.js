@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `UW Coffee N' Code`,
+    description: `DESCRIPTION!`,
+    author: `UW Coffee N' Code Team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,5 +30,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          src: "./src",
+        },
+      },
+    },
+    `gatsby-plugin-postcss`,
   ],
 }

@@ -1,0 +1,26 @@
+@font-face {
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap")
+    format("woff2 supports variations");
+  font-family: "Inter";
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@taiwlind screens;
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
