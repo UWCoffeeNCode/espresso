@@ -21,10 +21,12 @@ const CTA: FC<CTAProps> = ({ className, ...otherProps }) => (
       {/* TODO: Use custom email backend (instead of Netlify Forms) */}
       <form
         className="flex flex-row mt-4"
-        name="signup"
-        method="POST"
+        name="newsletter"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="POST"
       >
+        <input type="hidden" name="form-name" value="newsletter" />
         <input
           className={names(
             "bg-indigo-600 text-indigo-100 placeholder-indigo-300",
@@ -32,9 +34,10 @@ const CTA: FC<CTAProps> = ({ className, ...otherProps }) => (
             "flex-1",
           )}
           type="email"
+          name="email"
           placeholder="jon.snow@example.com"
         />
-        <input
+        <button
           className={names(
             "bg-gray-400 hover:opacity-75",
             "text-gray-800 font-semibold",
@@ -42,8 +45,9 @@ const CTA: FC<CTAProps> = ({ className, ...otherProps }) => (
             "cursor-pointer",
           )}
           type="submit"
-          value="Sign Up"
-        />
+        >
+          Sign Up
+        </button>
       </form>
     </div>
   </section>
