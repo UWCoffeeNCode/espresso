@@ -14,3 +14,13 @@ _The web frontend for [uwcoffeencode.com](https://uwcoffeencode.com)_
 
 [Mockups](https://www.figma.com/file/9TZjQkyHyRpyczjIhFJsxd/Espresso) are stored and updated on [Figma](https://www.figma.com). An exported archive of the design is
 available at [`design.fig`](./design.fig)
+
+## Development
+
+### Releases
+
+To release a new version, run the following command:
+
+```bash
+yarn release -r (major | minor | patch)
+```

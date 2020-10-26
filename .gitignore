@@ -49,8 +49,7 @@ pids
 
 
 # == Dotenv ==
-.env.local
-.env.*.local
+.env
 
 
 # == IDE ==
