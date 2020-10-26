@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
+  "homepage": "https://uwcoffeencode.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/uwcoffeencode/espresso"

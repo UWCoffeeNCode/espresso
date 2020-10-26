@@ -1,0 +1,10 @@
+[build]
+publish = "public"
+command = "npm run build"
+
+# Redirect unmatched paths to the 404 page.
+[[redirects]]
+from = "/*"
+to = "/404.html"
+status = 200
+

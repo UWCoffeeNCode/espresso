@@ -51,10 +51,10 @@ const NavLink: FC<NavLinkProps> = ({
   <div className={names("ml-3", className)} {...otherProps}>
     <Link
       to={to}
-      style={{ color: resolveColor("gray", "700") }}
-      activeStyle={{ color: resolveColor("gray", "900") }}
+      style={{ color: resolveColor("brand", "800") }}
+      activeStyle={{ color: resolveColor("black") }}
     >
-      <h4 className="font-bold hover:opacity-75">{children}</h4>
+      <h4 className="font-bold hover:text-black">{children}</h4>
     </Link>
   </div>
 )
