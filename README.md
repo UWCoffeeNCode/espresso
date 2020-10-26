@@ -12,8 +12,9 @@ _The web frontend for [uwcoffeencode.com](https://uwcoffeencode.com)_
 
 ## Design
 
-[Mockups](https://www.figma.com/file/9TZjQkyHyRpyczjIhFJsxd/Espresso) are stored and updated on [Figma](https://www.figma.com). An exported archive of the design is
-available at [`design.fig`](./design.fig)
+[Mockups](https://www.figma.com/file/9TZjQkyHyRpyczjIhFJsxd/Espresso) are
+stored and updated on [Figma](https://www.figma.com). An exported archive of
+the design is available at [`design.fig`](./design.fig)
 
 ## Development
 
