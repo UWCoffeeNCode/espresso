@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `UW Coffee N' Code`,
-    description: `DESCRIPTION!`,
-    author: `UW Coffee N' Code Team`,
+    title: `UW Coffee 'N Code`,
+    description: `Coffee 'N Code is a beginner-friendly club for people who want to learn to code.`,
+    author: `UW Coffee 'N Code Team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `UW Coffee N' Code`,
+        name: `UW Coffee 'N Code`,
         short_name: `UW CNC`,
         start_url: `/`,
         background_color: `#FFFFFF`,

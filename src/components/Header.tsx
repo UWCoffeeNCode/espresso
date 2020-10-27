@@ -16,7 +16,7 @@ const Header: FC<HeaderProps> = ({ className, ...otherProps }) => (
       <h1
         className={names("text-xl font-extrabold", "ml-3", "hidden sm:block")}
       >
-        UW COFFEE N' CODE
+        UW COFFEE 'N CODE
       </h1>
     </div>
     <div className="flex-1" />
