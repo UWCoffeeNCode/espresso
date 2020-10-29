@@ -2,6 +2,14 @@
 publish = "public"
 command = "npm run build"
 
+
+# Proxy GraphQL API requests.
+[[redirects]]
+from = "/api/graphql"
+to = "https://api.uwcoffeencode.com/graphql"
+status = 200
+
+
 # Redirect unmatched paths to the 404 page.
 [[redirects]]
 from = "/*"
