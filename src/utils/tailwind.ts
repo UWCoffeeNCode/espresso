@@ -21,12 +21,12 @@ export const resolveThemeValue = <
   Key extends keyof TailwindTheme[Section]
 >(
   section: Section,
-  key: Key
+  key: Key,
 ): TailwindTheme[Section][Key] => TAILWIND_THEME[section][key]
 
 export const resolveColor = (
   name: string,
-  scale?: keyof ColorScale
+  scale?: keyof ColorScale,
 ): string | undefined => {
   const color = resolveThemeValue("colors", name)
   if (!color) return undefined

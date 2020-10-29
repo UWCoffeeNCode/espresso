@@ -2,14 +2,14 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import SEO from "src/components/SEO"
-import CTA from "src/components/CTA"
-import Hero from "src/components/Hero"
+import HeroSection from "src/components/HeroSection"
+import SignupSection from "src/components/SignupSection"
 
 const IndexPage = () => (
   <Layout>
     <SEO />
-    <Hero />
-    <CTA />
+    <HeroSection />
+    <SignupSection />
   </Layout>
 )
 

@@ -31,5 +31,11 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    cursor: ({ after }) => after(["disabled"]),
+    opacity: ({ after }) => after(["disabled"]),
+    textColor: ({ after }) => after(["disabled"]),
+    textOpacity: ({ after }) => after(["disabled"]),
+    backgroundColor: ({ after }) => after(["disabled"]),
+  },
 }

@@ -1,8 +1,27 @@
+const dotenv = require("dotenv")
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
+// Load environment from '.env'.
+dotenv.config()
+
 module.exports = {
   siteMetadata: {
     title: `UW Coffee 'N Code`,
     description: `Coffee 'N Code is a beginner-friendly club for people who want to learn to code.`,
     author: `UW Coffee 'N Code Team`,
+  },
+  developMiddleware: app => {
+    app.use(
+      "/api/graphql",
+      createProxyMiddleware({
+        target: process.env.ESPRESSO_API_URL,
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {
+          "/api/": "/",
+        },
+      }),
+    )
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,5 +58,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-apollo`,
+      options: {
+        uri: `/api/graphql`,
+        credentials: `include`,
+      },
+    },
   ],
 }

@@ -1,9 +1,9 @@
 import React, { FC, HTMLAttributes } from "react"
 import names from "classnames"
 
-export interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
+export interface HeroSectionProps extends HTMLAttributes<HTMLDivElement> {}
 
-const Hero: FC<HeroProps> = ({ className, ...otherProps }) => (
+const HeroSection: FC<HeroSectionProps> = ({ className, ...otherProps }) => (
   <section
     className={names("pt-10 md:pt-12 lg:pt-16", "bg-brand-500", className)}
     {...otherProps}
@@ -53,4 +53,4 @@ const Hero: FC<HeroProps> = ({ className, ...otherProps }) => (
   </section>
 )
 
-export default Hero
+export default HeroSection
