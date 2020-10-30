@@ -63,6 +63,7 @@ export interface UserCard_user {
 //==============================================================
 
 export interface SignupInput {
+  token: string;
   email: string;
   firstName: string;
   lastName: string;

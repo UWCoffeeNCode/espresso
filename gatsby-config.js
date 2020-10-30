@@ -65,5 +65,11 @@ module.exports = {
         credentials: `include`,
       },
     },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: [`ESPRESSO_RECAPTCHA_KEY`],
+      },
+    },
   ],
 }

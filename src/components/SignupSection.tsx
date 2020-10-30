@@ -4,16 +4,18 @@ import React, {
   HTMLAttributes,
   InputHTMLAttributes,
   ReactNode,
+  useState,
 } from "react"
 import names from "classnames"
+
+import { useForm } from "react-hook-form"
+import { useGoogleReCaptcha as useReCaptcha } from "react-google-recaptcha-v3"
 import { validate as validateEmail } from "email-validator"
 
 import { MoonLoader as Loading } from "react-spinners"
 
 import { gql, useMutation } from "@apollo/client"
 import { Signup, SignupInput, SignupVariables } from "src/schema"
-import { useForm } from "react-hook-form"
-import { resolveColor } from "src/utils/tailwind"
 
 export interface SignupProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -56,6 +58,8 @@ interface SignupFormValues
   extends Pick<SignupInput, "email" | "firstName" | "lastName"> {}
 
 const SignupForm: FC<SignupFormProps> = ({ className, ...otherProps }) => {
+  const { executeRecaptcha } = useReCaptcha()
+
   const [signup, { data, loading, error }] = useMutation<
     Signup,
     SignupVariables
@@ -69,14 +73,17 @@ const SignupForm: FC<SignupFormProps> = ({ className, ...otherProps }) => {
     mode: "all",
   })
 
-  const onSubmit = handleSubmit(({ firstName, lastName, email }) => {
+  const onSubmit = handleSubmit(async ({ firstName, lastName, email }) => {
+    if (!executeRecaptcha) throw new Error("Failed to execute ReCaptcha.")
+    const token = await executeRecaptcha("signup")
     signup({
       variables: {
         input: {
-          firstName,
-          lastName,
+          token,
           email,
           subscribe: true,
+          firstName,
+          lastName,
         },
       },
     })
